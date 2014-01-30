@@ -23,3 +23,4 @@ en:
   hello: "Hello world"
   read_more: "Read more"
   sign_in: "Sign in"
+  sign_out: "Sign out"

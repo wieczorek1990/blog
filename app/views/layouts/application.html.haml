@@ -29,7 +29,10 @@
           %a.brand(href="#") Blog
           .container.nav-collapse
             %ul.nav
-              %li= link_to t('sign_in'), new_user_session_path
+              - if user_signed_in?
+                %li= link_to t('sign_out'), destroy_user_session_path, method: :delete
+              - else
+                %li= link_to t('sign_in'), new_user_session_path
 
     .container-fluid
 
@@ -39,10 +42,10 @@
             %ul.nav.nav-list
               %li.nav-header Sidebar
 
-        .span9
+        .span6
           = bootstrap_flash
-          %p{class: 'notice'}= notice
-          %p{class: 'alert'}= alert
+          - if alert
+            %p{class: 'alert'}= alert
           = yield
     
       %footer

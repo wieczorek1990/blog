@@ -61,3 +61,7 @@ gem 'twitter-bootstrap-rails'
 gem 'rails-settings-cached'
 
 gem 'mercury-rails'
+
+gem 'bootstrap-sass'
+
+gem 'bootstrap-wysihtml5-rails'
