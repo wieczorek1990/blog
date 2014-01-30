@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.2'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+#gem 'sqlite3'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -65,3 +65,5 @@ gem 'mercury-rails'
 gem 'bootstrap-sass'
 
 gem 'bootstrap-wysihtml5-rails'
+
+gem 'pg'
