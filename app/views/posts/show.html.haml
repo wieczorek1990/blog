@@ -1,0 +1,11 @@
+- @post ||= post
+.post
+  %h1= @post.title
+  = @post.content.html_safe[0, Setting.post_character_limit]
+  %p{class: 'read_more'}
+    = link_to(t('read_more'), post_path(@post))
+- if user_signed_in?
+  .form-actions
+    = link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn'
+    = link_to t('.edit', :default => t("helpers.links.edit")), edit_post_path(@post), :class => 'btn'
+    = link_to t('.destroy', :default => t("helpers.links.destroy")), post_path(@post), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

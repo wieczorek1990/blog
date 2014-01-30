@@ -1,0 +1,4 @@
+- @posts.each do |post|
+  =render template: 'posts/show', locals: {post: post}
+.navigation
+  = will_paginate @posts
