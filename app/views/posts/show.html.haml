@@ -10,8 +10,6 @@
       = link_to(t('read_more'), post_path(@post))
   - else
     = @post.content.html_safe
-    %br
-    .fb-comments{data: {href: facebook_url(@post), numposts: '5', colorscheme: 'light'}}
 - if user_signed_in? and not welcome
   .form-actions
     = link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn'
