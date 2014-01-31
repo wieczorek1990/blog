@@ -42,6 +42,7 @@ class DeviseCreateUsers < ActiveRecord::Migration
   end
 
   def add_admin
-    User.new(email: 'admin@blog.pl', password: 'password').save
+    admin = User.new(email: 'admin@blog.pl', password: 'password').save
+    admin.add_role :admin
   end
 end

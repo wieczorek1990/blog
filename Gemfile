@@ -54,6 +54,10 @@ gem 'will_paginate'
 
 gem 'devise'
 
+gem 'cancan'
+
+gem 'rolify'
+
 gem 'paperclip'
 
 gem 'twitter-bootstrap-rails'
