@@ -6,3 +6,4 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create(email: 'admin@blog.pl', password: 'password').add_role :admin
+Setting.post_character_limit = 140

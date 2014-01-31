@@ -9,14 +9,9 @@ class CreateSettings < ActiveRecord::Migration
     end
     
     add_index :settings, [ :thing_type, :thing_id, :var ], :unique => true
-    create_settings
   end
 
   def self.down
     drop_table :settings
-  end
-
-  def create_settings
-    Setting.post_character_limit = 140
   end
 end
