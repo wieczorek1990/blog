@@ -6,7 +6,8 @@ ready = ->
     $(elem).wysihtml5())
   $('#query').typeahead({
     name: 'post',
-    remote: '/posts/autocomplete?query=%QUERY'
+    #remote: '/posts/autocomplete?query=%QUERY'
+    prefetch: '/posts/autocomplete'
   })
 $(document).ready(ready)
 $(document).on('page:load', ready)
