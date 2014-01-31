@@ -69,3 +69,5 @@ gem 'bootstrap-sass'
 gem 'bootstrap-wysihtml5-rails'
 
 gem 'pg'
+
+gem 'searchkick'

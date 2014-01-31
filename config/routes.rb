@@ -1,5 +1,7 @@
 Blog::Application.routes.draw do
-  resources :posts
+  resources :posts do
+    get 'autocomplete', on: :collection
+  end
 
   resources :tags
 

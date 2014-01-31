@@ -16,4 +16,5 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-wysihtml5
+//= require typeahead
 //= require_tree .
