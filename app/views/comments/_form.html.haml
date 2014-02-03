@@ -1,0 +1,7 @@
+- new ||= false
+- @comment = new ? @post.comments.build : @comment
+= form_for [@post, @comment], :html => { :class => 'form-horizontal' } do |f|
+  = f.text_area :content, :class => 'wysihtml5 input-block-level', rows: '10'
+  .form-actions
+    = f.submit nil, :class => 'btn btn-primary'
+    = link_to t('.cancel', :default => t("helpers.links.cancel")), post_comments_path(@post), :class => 'btn'
