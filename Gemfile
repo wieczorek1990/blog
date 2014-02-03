@@ -58,8 +58,6 @@ gem 'cancan'
 
 gem 'rolify'
 
-gem 'paperclip'
-
 gem 'twitter-bootstrap-rails'
 
 gem 'rails-settings-cached'
@@ -71,3 +69,7 @@ gem 'bootstrap-wysihtml5-rails'
 gem 'pg'
 
 gem 'searchkick'
+
+gem 'chosen-rails'
+
+gem 'jquery-turbolinks'

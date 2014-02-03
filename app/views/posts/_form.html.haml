@@ -7,6 +7,10 @@
     = f.label :content, :class => 'control-label'
     .controls
       = f.text_area :content, :class => 'wysihtml5 input-block-level', size: '20x20'
+  .control-group
+    = f.label :tags, :class => 'control-label'
+    .controls
+      = f.select :tags, Tag.all.map { |t| [t.name, t.id] }, { include_blank: true, selected: @post.tags.map(&:id) }, { class: 'chosen-select', multiple: true }
   .form-actions
     = f.submit nil, :class => 'btn btn-primary'
     = link_to t('.cancel', :default => t("helpers.links.cancel")), posts_path, :class => 'btn'

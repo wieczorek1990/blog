@@ -1,9 +1,9 @@
 Blog::Application.routes.draw do
+  resources :tags
+
   resources :posts do
     get 'autocomplete', on: :collection
   end
-
-  resources :tags
 
   devise_for :users
   get "welcome/index"

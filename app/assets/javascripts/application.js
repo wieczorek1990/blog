@@ -13,8 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require twitter/bootstrap
+//= require jquery.turbolinks
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-wysihtml5
 //= require typeahead
+//= require chosen-jquery
+//= require scaffold
 //= require_tree .

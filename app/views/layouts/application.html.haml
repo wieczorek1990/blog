@@ -38,13 +38,17 @@
 
       .row-fluid
         .span3
-          .well.sidebar-nav
-            %ul.nav.nav-list
-              %li.nav-header Sidebar
+          - if user_signed_in?
+            .well.sidebar-nav
+              %ul.nav.nav-list
+                %li.nav-header Sidebar
+                %li= link_to t('welcome'), welcome_index_path
+                %li= link_to t('posts'), posts_path
+                %li= link_to t('tags'), tags_path
 
         .span6
           = bootstrap_flash
           = yield
     
       %footer
-        %p &copy; Company 2014
+        %p &copy; ŁW 2014
