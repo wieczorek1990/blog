@@ -33,6 +33,7 @@ class Ability
       can :manage, :all
     else
       cannot :manage, :all
+      can :manage, Comment, commenter_id: user.id
     end
   end
 end

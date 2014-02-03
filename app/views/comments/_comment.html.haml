@@ -1,0 +1,6 @@
+- model_class = Comment
+- comment ||= @comment
+%p
+  = User.find(comment.commenter).email + t('wrote')
+  %br
+  = comment.content.html_safe

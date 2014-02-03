@@ -3,6 +3,7 @@ Blog::Application.routes.draw do
 
   resources :posts do
     get 'autocomplete', on: :collection
+    resources :comments
   end
 
   devise_for :users
