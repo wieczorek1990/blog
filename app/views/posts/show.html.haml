@@ -1,4 +1,4 @@
-- @post ||= post
+- @post = defined?(post) ? post : @post
 - welcome ||= false
 .post
   %h1= @post.title
@@ -13,12 +13,13 @@
   %br
   - @post.tags.each do |tag|
     = link_to tag.name, tag_path(tag), class: 'btn btn-small'
-%h3= 'Comments'
-= render @post.comments
-.add-comment
-  %h4= 'Add a comment'
-.comment-form
-  = render partial: 'comments/form', locals: { new: true }
+- unless welcome
+  %h3= 'Comments'
+  = render @post.comments.order('created_at ASC')
+  .add-comment
+    %h4= 'Add a comment'
+    .comment-form
+      = render partial: 'comments/form', locals: { new: true }
 - if user_signed_in? and not welcome
   .form-actions
     = link_to t('.back', :default => t("helpers.links.back")), posts_path, :class => 'btn'

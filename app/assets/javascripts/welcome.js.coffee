@@ -9,5 +9,5 @@ $ ->
     $(this).css('cursor', 'pointer')
   )
   $add_comment.click(->
-    $comment_form.toggle()
+    $(this).children().closest('.comment-form').toggle()
   )
