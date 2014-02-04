@@ -26,7 +26,7 @@
             %span.icon-bar
             %span.icon-bar
             %span.icon-bar
-          %a.brand(href="#") Blog
+          %a.brand(href="/") Blog
           .container.nav-collapse
             %ul.nav
               - if user_signed_in?
@@ -51,4 +51,5 @@
           = yield
     
       %footer
-        %p &copy; ŁW 2014
+        .navigation
+          %p &copy; ŁW 2014
